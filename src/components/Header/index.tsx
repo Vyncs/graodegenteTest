@@ -11,13 +11,19 @@ import {
   CustomHeart,
   CustomHandbag,
 } from "./style";
+import { Links } from "../Footer/style";
+import { DiscountMessage } from "../DiscountMessage";
 
 const component = () => {
   return (
+    <>
+      <DiscountMessage />
       <BackgroundHeader>
         <HeaderContainer>
           {/* <Image src={logoImg} alt="" /> */}
-          <ImageText>grão de gente</ImageText>
+          <Links href="/">
+            <ImageText>grão de gente</ImageText>
+          </Links>
           <CustomInput type="text" placeholder="Pesquisar" withIcon />
           <FlexIcons>
             <UserFlex>
@@ -34,6 +40,7 @@ const component = () => {
         </HeaderContainer>
         <ExampleNavigationMenu></ExampleNavigationMenu>
       </BackgroundHeader>
+    </>
   );
 };
 

@@ -161,9 +161,7 @@ const AboutMenu = React.forwardRef(
               props.onMouseEnter?.(event);
               setAnchorEl(event.currentTarget);
             }}
-            sx={(theme) => ({
-              ...(open && theme.variants.plainHover.neutral),
-            })}
+
           >
             About <KeyboardArrowDown />
           </ListItemButton>
@@ -186,6 +184,7 @@ const AboutMenu = React.forwardRef(
                 "--List-padding": "4px",
                 "--ListDivider-gap": "4px",
                 "--ListItemDecorator-size": "32px",
+                background :'#FFF',
               }}
             >
               <ListItem role="none">
@@ -259,7 +258,6 @@ const AdmissionsMenu = React.forwardRef(
       <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
         <Box onMouseLeave={() => setAnchorEl(null)}>
           <ListItemButton
-            aria-haspopup
             aria-expanded={open ? "true" : "false"}
             ref={ref}
             {...props}
@@ -302,17 +300,15 @@ const AdmissionsMenu = React.forwardRef(
                 boxShadow: "md",
                 borderRadius: "sm",
                 minWidth: 180,
+                background :'#FFF',
                 "--List-radius": "8px",
                 "--List-padding": "4px",
                 "--ListDivider-gap": "4px",
               }}
             >
-              <ListItem role="none">
+              <ListItem role="none" >
                 <ListItemButton role="menuitem" {...getTargetProps(0)}>
                   <ListItemContent>Apply</ListItemContent>
-                  <Chip size="sm" variant="soft" color="danger">
-                    Last 2 days!
-                  </Chip>
                 </ListItemButton>
               </ListItem>
               <ListDivider />
@@ -345,11 +341,12 @@ export default function ExampleNavigationMenu() {
   const { targets, getTargetProps, setActiveIndex, focusNext, focusPrevious } =
     useRovingIndex();
   return (
-    <Box sx={{ minHeight: 190 }}>
+    <Box>
       <List
         role="menubar"
         orientation="horizontal"
         sx={{
+          zIndex: '1',
           "--List-radius": "8px",
           "--List-padding": "4px",
           "--List-gap": "8px",

@@ -12,8 +12,6 @@ export const HeaderContainer = styled("div", {
 
 export const BackgroundHeader = styled('div', {
     backgroundColor: "$blue",
-    border: '1px solid red',
-    height: '220px'
 })
 
 
