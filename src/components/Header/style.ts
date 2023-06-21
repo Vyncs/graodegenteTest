@@ -1,11 +1,5 @@
-import { styled } from "..";
+import { styled } from "@stitches/react";
 import { Handbag, Heart} from "phosphor-react";
-
-export const Container = styled("div", {
-  display: "flex",
-  flexDirection: "column",
-  minHeight: "100vh",
-});
 
 export const HeaderContainer = styled("div", {
   display: "flex",
@@ -13,9 +7,15 @@ export const HeaderContainer = styled("div", {
   alignItems: "center",
   width: "100$",
   padding: "1rem 3rem",
-  backgroundColor: "$blue",
   height: '134px',
 });
+
+export const BackgroundHeader = styled('div', {
+    backgroundColor: "$blue",
+    border: '1px solid red',
+    height: '220px'
+})
+
 
 export const ImageText = styled("h1", {
   fontFamily: "Sacramento, cursive;",

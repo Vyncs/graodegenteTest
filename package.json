@@ -11,6 +11,9 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@material-ui/icons": "^4.11.3",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/joy": "^5.0.0-alpha.84",
     "@mui/material": "^5.13.5",
     "@stitches/react": "^1.2.8",
     "@types/node": "20.3.1",
